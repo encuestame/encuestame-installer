@@ -6,7 +6,7 @@
     <artifactId>installer</artifactId>
     <name>Encuestame Installer</name>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.5.0-SNAPSHOT</version>
     <!--> <-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,7 +31,7 @@
         <application.name>ENCUESTAME</application.name>
         <application.contributor.backend>Diana Paola Morales</application.contributor.backend>
         <application.contributor.frontend>Juan Carlos Picado</application.contributor.frontend>
-        <application.version>Encuestame Installer 1.0</application.version>
+        <application.version>Encuestame Installer ${project.version}</application.version>
         <application.documentation.url>http://www.encuestame.org/wiki/display/DOC/Encuestame+Documentation</application.documentation.url>
         <application.documentation.recaptcha>http://www.encuestame.org/wiki/display/DOC/Encuestame+Documentation</application.documentation.recaptcha>
     </properties>
@@ -42,13 +42,13 @@
       <id>dmorales</id>
       <name>Diana Morales</name>
       <email>dmorales@encuestame.org</email>
-      <timezone>+7</timezone>
+      <timezone>+1</timezone>
     </developer>
     <developer>
       <id>jpicado</id>
       <name>Juan Picado</name>
       <email>jpicado@encuestame.org</email>
-      <timezone>+7</timezone>
+      <timezone>+1</timezone>
     </developer>
   </developers>
 
@@ -184,7 +184,7 @@
                         <configuration>
                           <serverId>tomcat</serverId>
                           <url>http://mirror2.klaus-uwe.me/apache/tomcat/tomcat-${tomcat}/${version.tomcat}/</url>
-                            <excludes>apache-tomcat-7.0.59-deployer.tar.gz, apache-tomcat-7.0.59-deployer.zip, apache-tomcat-7.0.59-fulldocs.tar.gz,apache-tomcat-7.0.59-windows-i64.zip,apache-tomcat-7.0.59.exe,apache-tomcat-7.0.59.tar.gz, README.html, extras/, embed/</excludes>
+                            <excludes>apache-tomcat-${version.tomcat}-deployer.tar.gz, apache-tomcat-${version.tomcat}-deployer.zip, apache-tomcat-${version.tomcat}-fulldocs.tar.gz,apache-tomcat-${version.tomcat}-windows-i64.zip,apache-tomcat-${version.tomcat}.exe,apache-tomcat-${version.tomcat}.tar.gz, README.html, extras/, embed/</excludes>
                           <fromDir>bin</fromDir>
                           <toDir>${izpack.staging}</toDir>
                         </configuration>
