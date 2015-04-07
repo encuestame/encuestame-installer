@@ -16,7 +16,7 @@
         <version.log4j>1.2.17</version.log4j>
         <version.commons.logging>1.2</version.commons.logging>
         <izpack.staging>${project.build.directory}/staging</izpack.staging>
-        <installer-output-filename>encuestame-web-installer.jar</installer-output-filename>
+        <installer-output-filename>encuestame-web-${project.version}-installer</installer-output-filename>
         <version.tomcat>v7.0.59</version.tomcat>
         <tomcat>7</tomcat>
         <version.tomcat.file>7.0.59</version.tomcat.file>
@@ -35,6 +35,20 @@
         <application.documentation.url>http://www.encuestame.org/wiki/display/DOC/Encuestame+Documentation</application.documentation.url>
         <application.documentation.recaptcha>http://www.encuestame.org/wiki/display/DOC/Encuestame+Documentation</application.documentation.recaptcha>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
   <!-- Developers-->
    <developers>
@@ -341,7 +355,7 @@
                 <!-- base for relative paths in izpack descriptor -->
                 <baseDir>${izpack.staging}</baseDir>
                 <installFile>${izpack.staging}/install.xml</installFile>
-                <output>${project.build.directory}/${installer-output-filename}</output>
+                <output>${project.build.directory}/${installer-output-filename}.jar</output>
              </configuration>
           </execution>
         </executions>
@@ -367,6 +381,49 @@
                 <outputDirectory>${izpack.staging}/resources</outputDirectory>
             </configuration>
         </plugin>
+        <plugin>
+            <groupId>com.akathist.maven.plugins.launch4j</groupId>
+            <artifactId>launch4j-maven-plugin</artifactId>
+            <version>1.7.5</version>
+            <executions>
+               <execution>
+                   <id>l4j-clui</id>
+                   <phase>package</phase>
+                   <goals>
+                       <goal>launch4j</goal>
+                   </goals>
+                   <configuration>
+                       <headerType>gui</headerType>
+                       <jar>${project.build.directory}/${installer-output-filename}.jar</jar>
+                       <outfile>${project.build.directory}/${installer-output-filename}.exe</outfile>
+                       <downloadUrl>http://java.com/download</downloadUrl>
+                       <jre>
+                           <minVersion>1.6.0</minVersion>
+                           <jdkPreference>preferJre</jdkPreference>
+                       </jre>
+                       <icon>${project.basedir}/src/logo_white_medium.bin</icon>
+                       <splash>
+                         <file>${project.basedir}/src/splashcreen.bmp</file>
+                         <waitForWindow>true</waitForWindow>
+                         <timeout>60</timeout>
+                         <timeoutErr>true</timeoutErr>
+                       </splash>
+                       <versionInfo>
+                           <fileVersion>1.5.0.0</fileVersion>
+                           <txtFileVersion>${project.version}</txtFileVersion>
+                           <fileDescription>Encuestame Web Installer for Windows</fileDescription>
+                           <copyright>Paola Morales</copyright>
+                           <productVersion>1.5.0.0</productVersion>
+                           <txtProductVersion>1.5.0.0</txtProductVersion>
+                           <productName>App</productName>
+                           <companyName>Encuestame</companyName>
+                           <internalName>encuestame</internalName>
+                           <originalFilename>${installer-output-filename}.exe</originalFilename>
+                       </versionInfo>
+                   </configuration>
+               </execution>
+             </executions>
+           </plugin>
     </plugins>
   </build>
 </project>
