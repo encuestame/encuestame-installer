@@ -25,6 +25,7 @@
         <variable name="db.type.url.connection" value="postgresql" condition="postgres.db.selected"/>   
         <variable name="TargetPanel.dir.windows" value="$USER_HOME"/>
         <variable name="TargetPanel.dir.unix" value="$USER_HOME"/>
+        <variable name="apache.tomcat.version" value="7.0.61"/>
     </variables>
 
 
@@ -247,38 +248,34 @@
         <pack name="linux-mac" preselected="yes" required="no" parent="Tomcat-Web-container" condition="or.installation">
             <description>Server to be installed on Linux or Mac operating systems</description>
              
-            <file src="apache-tomcat-7.0.59.zip" targetdir="$INSTALL_PATH/" unpack="true"/> 
+            <file src="apache-tomcat-${apache.tomcat.version}.zip" targetdir="$INSTALL_PATH/" unpack="true"/> 
               
         </pack>
 
         <pack name="windows-32bits" preselected="no" required="no"   parent="Tomcat-Web-container" condition="izpack.windowsinstall">
             <onSelect name="!windows-64bits"/> 
             <description>Server to be installed on Windows 32 bits</description> 
-            <file src="apache-tomcat-7.0.59-windows-x86.zip" targetdir="$INSTALL_PATH/" unpack="true" /> 
+            <file src="apache-tomcat-${apache.tomcat.version}-windows-x86.zip" targetdir="$INSTALL_PATH/" unpack="true" /> 
         </pack>
 
         <pack name="windows-64bits" preselected="no" required="no"  parent="Tomcat-Web-container" condition="izpack.windowsinstall">
             <description>Server to be installed on Windows 64 bits.</description>  
             <onSelect name="!windows-32bits"/> 
-            <file src="apache-tomcat-7.0.59-windows-x64.zip" targetdir="$INSTALL_PATH/" unpack="true"/> 
+            <file src="apache-tomcat-${apache.tomcat.version}-windows-x64.zip" targetdir="$INSTALL_PATH/" unpack="true"/> 
            
         </pack> 
 
         <pack name="Basic Files" preselected="no" required="yes">
             <description>Basic Files </description>
 
-            <file src="property-files/encuestame-config-custom.properties" targetdir="$INSTALL_PATH/apache-tomcat-7.0.59/lib/"
-                  override="true" />
-            <file src="property-files/encuestame-config-custom.properties" targetdir="$INSTALL_PATH/home"
-                  override="true" />
-
-            <parsable targetfile="$INSTALL_PATH/apache-tomcat-7.0.59/lib/encuestame-config-custom.properties" type="javaprop"/>
-            <parsable targetfile="$INSTALL_PATH/encuestame-config-custom.properties" type="javaprop"/>
+            <file src="property-files/encuestame-config-custom.properties" targetdir="$INSTALL_PATH/apache-tomcat-${apache.tomcat.version}/lib/"
+                  override="true" /> 
+            <parsable targetfile="$INSTALL_PATH/apache-tomcat-${apache.tomcat.version}/lib/encuestame-config-custom.properties" type="javaprop"/> 
 
             <file src="home/" targetdir="$INSTALL_PATH/"/>
             <file src="resources/License.txt" targetdir="$INSTALL_PATH/"/>
             <file src="resources/Readme.txt" targetdir="$INSTALL_PATH/"/> 
-            <file src="war/encuestame.war" targetdir="$INSTALL_PATH/apache-tomcat-7.0.59/webapps"/> 
+            <file src="war/encuestame.war" targetdir="$INSTALL_PATH/apache-tomcat-${apache.tomcat.version}/webapps"/> 
             
         </pack>
     </packs>

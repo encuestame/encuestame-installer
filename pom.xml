@@ -17,9 +17,9 @@
         <version.commons.logging>1.2</version.commons.logging>
         <izpack.staging>${project.build.directory}/staging</izpack.staging>
         <installer-output-filename>encuestame-web-${project.version}-installer</installer-output-filename>
-        <version.tomcat>v7.0.59</version.tomcat>
+        <version.tomcat>v7.0.61</version.tomcat>
         <tomcat>7</tomcat>
-        <version.tomcat.file>7.0.59</version.tomcat.file>
+        <version.tomcat.file>7.0.61</version.tomcat.file>
         <version.encuestame>1.5.0</version.encuestame>
         <windows.x64>windows-x86</windows.x64>
         <windows.x86>windows-x64</windows.x86>
