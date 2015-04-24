@@ -18,7 +18,7 @@
         <izpack.staging>${project.build.directory}/staging</izpack.staging>
         <installer-output-filename>encuestame-web-${project.version}-installer</installer-output-filename>
         <version.tomcat>7.0.61</version.tomcat>
-        <tomcat>7</tomcat> 
+        <tomcat>7</tomcat>
         <version.encuestame>1.5.0</version.encuestame>
         <windows.x64>windows-x86</windows.x64>
         <windows.x86>windows-x64</windows.x86>
@@ -26,7 +26,7 @@
         <version.mysql.connector>5.1.21</version.mysql.connector>
         <version.postgres.connector>9.2-1003-jdbc3</version.postgres.connector>
         <encuestame.site>www.encuestame.org</encuestame.site>
-        <encuestame.contact.email>encuestameteam@encuestame.org</encuestame.contact.email>
+        <encuestame.contact.email>info@encuestame.org</encuestame.contact.email>
         <application.name>ENCUESTAME</application.name>
         <application.contributor.backend>Diana Paola Morales</application.contributor.backend>
         <application.contributor.frontend>Juan Carlos Picado</application.contributor.frontend>
