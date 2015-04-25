@@ -17,9 +17,6 @@ If you want to download a built version of Encuestame, the files are hosted in S
 * [Juan Carlos Picado](http://www.jotadeveloper.me)
 * [All Contributors](https://github.com/orgs/encuestame/people)
 
-* [Encuestame Latest Revisions](http://www.encuestame.org/revisions/)
-* [Sourceforce](http://sourceforge.net/projects/encuestame/?source=directory)
-
 ## Contributions
 Pull requests are, of course, very welcome! A few "todos", if anyone is [interested](http://www.encuestame.org/wiki/display/DEVELOPMENT/Commiters+Guidelines).
 
