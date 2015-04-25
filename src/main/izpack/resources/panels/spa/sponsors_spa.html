@@ -4,72 +4,74 @@
 </head>
 
 <body>
-<div>
-    <h3>${application.name}</h3>
     <div>
-        <b>
-            Version
-        </b>
-        : ${application.version}
-    </div>
-    <div>
-        <b>
-            Proyecto alojado en Github
-        </b>
-        <a href="${encuestame.site}">${encuestame.site}</a>
-    </div>
-    <div>
-        <b>
-            Autores :
-        </b>
-        <ul>
-            <li>
-                <a href="https://github.com/dianmorales">
-                    ${application.contributor.backend}
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/jotadeveloper">
-                    ${application.contributor.frontend}
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/orgs/encuestame/people">
-                    Colaboradores
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div>
-        <b>
-            Contacto :
-        </b>
-        <a href="mailto:${encuestame.contact.email}">
-            ${encuestame.contact.email}
-        </a>
-    </div>
-    <div>
-        <b>
+        <h3>${application.name}</h3>
+        <div>
             <b>
-                Documentación
+                Version
             </b>
-            <a href="{application.documentation.url}">
-                ${application.documentation.url}
+            : ${application.version}
+        </div>
+        <div>
+            <b>
+                Proyecto alojado en Github
+            </b>
+            <a href="${encuestame.site}">${encuestame.site}</a>
+        </div>
+        <div>
+            <b>
+                Autores :
+            </b>
+            <ul>
+                <li>
+                    <a href="https://github.com/dianmorales">
+                        ${application.contributor.backend}
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/jotadeveloper">
+                        ${application.contributor.frontend}
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/orgs/encuestame/people">
+                        Colaboradores
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <b>
+                Contacto :
+            </b>
+            <a href="mailto:${encuestame.contact.email}">
+                ${encuestame.contact.email}
             </a>
-        </b>
-
-    </div>
-</div>
-
-<div id="sponsors">
-    <div class="row">
-        <div>
-            <img src="atlassian">
         </div>
         <div>
-            <img src="jetbrain">
+            <b>
+                <b>
+                    Documentación
+                </b>
+                <a href="{application.documentation.url}">
+                    ${application.documentation.url}
+                </a>
+            </b>
+
         </div>
     </div>
-</div>
+    <h3>
+        Sponsors
+    </h3>
+    <div id="sponsors">
+        <div class="row">
+            <div>
+                <img src="atlassian">
+            </div>
+            <div>
+                <img src="jetbrain">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
