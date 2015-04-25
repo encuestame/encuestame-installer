@@ -1,27 +1,75 @@
 <html>
-	<head>
-		<title>Welcome Panel to ${application.name} Setup</title> 
-	</head>
+<head>
+    <title>Bienvenido al Panel de Instalacion de ${application.name}</title>
+</head>
 
-	<body> 
-	 <div> 
-		<a>${application.name}</a>
-		<b>Version  </b> ${application.version}
-			Projecto alojado Github: <a href="${encuestame.site}">${encuestame.site}</a>
-			<br>Autores :
-			<ul>
-				<li><a href="https://github.com/dianmorales">${application.contributor.backend}</a></li>
-				<li><a href="https://github.com/jotadeveloper">${application.contributor.frontend}</a></li>
-				<li><a href="https://github.com/orgs/encuestame/people">Contributors :</a></li>
-				
-			</ul>
-		<b>Contacto : </b>${encuestame.contact.email}
-		<b><a href="{application.documentation.url}"></a>Documentation : </b> 
-	</div>
+<body>
+<div>
+    <h3>${application.name}</h3>
+    <div>
+        <b>
+            Version
+        </b>
+        : ${application.version}
+    </div>
+    <div>
+        <b>
+            Proyecto alojado en Github
+        </b>
+        <a href="${encuestame.site}">${encuestame.site}</a>
+    </div>
+    <div>
+        <b>
+            Autores :
+        </b>
+        <ul>
+            <li>
+                <a href="https://github.com/dianmorales">
+                    ${application.contributor.backend}
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/jotadeveloper">
+                    ${application.contributor.frontend}
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/orgs/encuestame/people">
+                    Colaboradores
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <b>
+            Contacto :
+        </b>
+        <a href="mailto:${encuestame.contact.email}">
+            ${encuestame.contact.email}
+        </a>
+    </div>
+    <div>
+        <b>
+            <b>
+                Documentación
+            </b>
+            <a href="{application.documentation.url}">
+                ${application.documentation.url}
+            </a>
+        </b>
 
-	<div id="sponsors">
-		<img src="atlassian">
-		<img src="jetbrain">
-	</div>
-	</body>
+    </div>
+</div>
+
+<div id="sponsors">
+    <div class="row">
+        <div>
+            <img src="atlassian">
+        </div>
+        <div>
+            <img src="jetbrain">
+        </div>
+    </div>
+</div>
+</body>
 </html>
