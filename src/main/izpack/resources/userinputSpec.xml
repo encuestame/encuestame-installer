@@ -1,5 +1,5 @@
  <userInput> 
- 	<panel id="select.database.panel" order="0" summaryKey="select.database.summaryKey"> 
+ 	<panel id="select.database.panel" order="0">
  		<field type="radio" variable="db.type.selection">
 			<description align="left" txt=" " id="select.database.radio.txt"/>
   			<spec>
@@ -21,8 +21,7 @@
 		<field type="text" align="left" variable="hsql.url.file.name"  conditionid="show.hsql.filename.box">
 			<spec txt="Enter file Name : " size="12" set=" " id="hsqldb.file.name"/>
 			<validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="Invalid name!"/> 
-		</field>   
-
+		</field>
 		<field type="space"/>
 		<field type="space"/>
 		<field type="space"/>
@@ -33,7 +32,7 @@
 	 
 		
 	</panel>	
-    <panel id="dbase.connection.panel" order="0" summaryKey="database.summaryKey"> 
+    <panel id="dbase.connection.panel" order="0">
         <field type="space"/>
         <field type="title" id="title.database.panel" txt="Specify credentials data for accessing Database server" bold="true" size="1" />
         <!--> <field type="combo" variable="db.type.selection" revalidate="yes">
@@ -84,7 +83,7 @@
 				txt="Password not match" id="Password do not match" />
 		</field>    
 	</panel>  
-	<panel id="recaptcha" order="1" summaryKey="recaptcha.summaryKey"> 
+	<panel id="recaptcha" order="1" >
         <field type="title" id="captcha.configuration.panel" txt="Captcha Configuration" bold="true" size="1" />
 		<field type="text" align="left" variable="capcha.private.key" tooltip="recaptcha.privatekey.tt">
 			<spec txt="Enter Captcha Private key:" size="12" id="captcha.private.key.txt"/>
