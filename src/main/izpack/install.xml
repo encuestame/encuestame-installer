@@ -11,7 +11,7 @@
             <author name="Juan Picado" email="juanpicado19@gmail.com"/>
         </authors>
         <!--><pack200/><-->
-        <uninstaller name="${application.name}-uninstaller.jar"></uninstaller>
+        <uninstaller name="encuestame-uninstaller.jar"></uninstaller>
          <summarylogfilepath>$INSTALL_PATH/encuestame_install.log</summarylogfilepath>
     </info>
 
