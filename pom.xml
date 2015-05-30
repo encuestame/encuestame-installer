@@ -206,7 +206,7 @@
 
                         <configuration>
                           <serverId>tomcat</serverId>
-                          <url>http://archive.apache.org/dist/tomcat/tomcat-7/${version.tomcat}/bin/</url>
+                          <url>http://archive.apache.org/dist/tomcat/tomcat-7/v${version.tomcat}/bin</url>
                             <excludes>apache-tomcat-${version.tomcat}-deployer.tar.gz, apache-tomcat-${version.tomcat}-deployer.zip, apache-tomcat-${version.tomcat}-fulldocs.tar.gz,apache-tomcat-${version.tomcat}-windows-i64.zip,apache-tomcat-${version.tomcat}.exe,apache-tomcat-${version.tomcat}.tar.gz, README.html, extras/, embed/</excludes>
                           <fromDir>bin</fromDir>
                           <toDir>${izpack.staging}</toDir>
