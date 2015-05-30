@@ -6,7 +6,7 @@
     <artifactId>installer</artifactId>
     <name>Encuestame Installer</name>
     <packaging>jar</packaging>
-    <version>1.5.0</version>
+    <version>1.5.1</version>
     <!--> <-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,7 +19,7 @@
         <installer-output-filename>encuestame-web-${project.version}-installer</installer-output-filename>
         <version.tomcat>7.0.61</version.tomcat>
         <tomcat>7</tomcat>
-        <version.encuestame>1.5.0</version.encuestame>
+        <version.encuestame>1.5.1</version.encuestame>
         <windows.x64>windows-x86</windows.x64>
         <windows.x86>windows-x64</windows.x86>
         <maven-antrun-plugin>1.6</maven-antrun-plugin>
