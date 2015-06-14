@@ -185,6 +185,7 @@
         <res id="Heading.image" src="resources/logos-enme/horizontal/encuestame_horizontal_small_alpha.png"/>
         <res id="atlassian" src="resources/logos-sponsors/atlassian/atlassian-rgb-navy-xsmall.png" />
         <res id="jetbrain" src="resources/logos-sponsors/jetbrains/logo_jetbrain_xs.png" />
+        <res id="browserstack" src="resources/logos-sponsors/browserstack/browserstack.jpg" />
         <res id="installer.langsel.img" src="resources/logos-enme/vertical/encuestame_v_small_alpha.png"/> <!-->Image to language selection panel  <--> 
         <!--> Custom Panels <-->
         
